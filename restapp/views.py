@@ -9,7 +9,6 @@ from rest_framework.views import APIView
 # @api_view(['GET', 'POST'])
 # def hotel_list(request, format=None):
 class HotelList(APIView):
-    """
     # if request.method == 'GET':
     #     hotels = Hotel.objects.all()
     #     serializer = HotelSerializer(hotels, many=True)
@@ -22,7 +21,6 @@ class HotelList(APIView):
     #         serializer.save()
     #         return Response(serializer.data, status=status.HTTP_201_CREATED)
     #     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-    """
     def get(self, request, format=None):
         hotels = Hotel.objects.all()
         serializer = HotelSerializer(hotels, many=True)
